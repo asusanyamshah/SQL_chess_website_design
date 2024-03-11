@@ -88,7 +88,7 @@ I chose the constraints for all the entities based on data from websites. For ex
 
 ### Relationships
 
-![entity_relationship_diagram](entity_relationship.jpg)
+![entity_relationship_diagram](entity_relationship.png)
 
 ## Optimizations
 
