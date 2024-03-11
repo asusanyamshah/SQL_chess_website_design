@@ -2,30 +2,29 @@
 
 By Sanyam Shah
 
-Video overview: <https://youtu.be/b3jOthHApH4>
 
 ## Scope
 
 
-* What is the purpose of your database?
+* Purpose of this Database
 
 The purpose of this project is to design a database for a fictional chess website. Chess has been on a boom since the last two years. The websites were originally not being able to handle the sudden rise of players registering on their websites, and were therefore crashing. I wanted to create a database that stores basic information that a chess website requires, and make it highly optimized. I am a huge chess fan and this was a way for me to learn about how chess websites store information.
 
-* Which people, places, things, etc. are you including in the scope of your database?
+* The people, places, things, etc. included in the scope of your database
 
 The chess players, their games, information about their friendship, player statistics, game statistics, summary game statistics and world rankings is the scope of this database.
 
-* Which people, places, things, etc. are *outside* the scope of your database?
+* The people, places, things, etc. *outside* the scope of your database
 
 Information about chess puzzle ratings for players, the chess courses they completed, time control for games are some of the things that are outside of the scope of this database.
 
-## Functional Requirements
+## Functional Information
 
-* What should a user be able to do with your database?
+* What can a user do with this database?
 
 The user should be able to create a new account, view their game statistics, view their own personal statistics over multiple games,view the top 5 players in the world, view other players' profile.
 
-* What's beyond the scope of what a user should be able to do with your database?
+* What's beyond the scope of what a user can do with this database?
 
 The user cannot directly manipulate the databse. They cannot change their amount of wins, or draws, or losses.
 
@@ -33,12 +32,10 @@ The user cannot directly manipulate the databse. They cannot change their amount
 
 ### Entities
 
-In this section you should answer the following questions:
-
-* Which entities will you choose to represent in your database?
+* Which entities are represented in this database?
 Players, games, friendships, individual player statistics, and individual game statistics are the entities that I chose to represent in this database.
 
-* What attributes will those entities have?
+* What attributes do those entities have?
 
 Players:
 id: Unique identifier for each player.
@@ -76,11 +73,11 @@ accuracy_player_1: Accuracy of moves made by player 1 in the game.
 accuracy_player_2: Accuracy of moves made by player 2 in the game.
 
 
-* Why did you choose the types you did?
+* Reason for choosing the types
 
 I chose the types based on the values of the attributes. I also took inspiration from other chess websites like ```chess.com``` and ```lichess.org```.
 
-* Why did you choose the constraints you did?
+* Reason for choosing the constraints
 
 I chose the constraints for all the entities based on data from websites. For example, usernames are unique in websites like ```chess.com``` and ```lichess.org```, so I chose my username attribute to be unique. For each attribute, I thought about the different values that it could have, and based on that I chose particular constraints for it.
 
@@ -92,9 +89,8 @@ I chose the constraints for all the entities based on data from websites. For ex
 
 ## Optimizations
 
-In this section you should answer the following questions:
 
-* Which optimizations (e.g., indexes, views) did you create? Why?
+* Which optimizations (e.g., indexes, views) are created? Why?
 
 I created a view called ```world_ranking``` which will display some information about the players ordered by rating. I created this because knowing who is at the top is useful information.
 
@@ -121,10 +117,10 @@ There is another index called ```player_game_index```. This index is useful to w
 ## Limitations
 
 
-* What are the limitations of your design?
+* What are the limitations of this design?
 
 One of the main limitations of my design is that it does not encompass everything about chess websites. Popular chess websites have a lot more information and tables to store that information in. Trying to include everything would take very long. For the purpose of this project, I have added entities that represent the core information that a ches website would try to store.
 
-* What might your database not be able to represent very well?
+* What might this database not be able to represent very well?
 
 One thing that the database might not be able to represent very well is complex game statistics. Game statistics involves a lot more than just the average accuracy of players. Game statistics needs to include the number of brilliant moves, best moves, inaccuracies, mistakes and blunders by each player. Another thing that my database would not be able to represent is the moves played in each game.
